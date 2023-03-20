@@ -68,7 +68,7 @@ class CellContent extends StatelessWidget {
               isBooked
                   ? Positioned(
                       top: 3.0,
-                      right: 3.0,
+                      right: 2.0,
                       child: Container(
                         width: 6.0,
                         height: 6.0,
@@ -81,7 +81,14 @@ class CellContent extends StatelessWidget {
                   : const SizedBox.shrink(),
             ],
           )
-        : const SizedBox.shrink();
+        : Container(
+            padding: EdgeInsets.symmetric(vertical: 2.0),
+            margin: EdgeInsets.symmetric(vertical: 1.0),
+            child: Text(
+              '',
+              style: calendarStyle.textStyleEventSophie01,
+            ),
+          );
   }
 
   @override
